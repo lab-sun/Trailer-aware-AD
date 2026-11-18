@@ -1,0 +1,61 @@
+# @package _group_
+speed:
+  module: actor_state.speed
+gnss:
+  module: navigation.gnss
+image:
+  module: camera.rgb
+  fov: 90
+  width: 256
+  height: 256
+  location: [3.2, 0.0, 1.15]
+  rotation: [0.0, 0.0, 0.0]
+  distort_images: False
+waypoints:
+  module: navigation.waypoint_plan
+  steps: 10
+control:
+  module: actor_state.control
+theta:
+  module: actor_state.theta
+monitor:
+  module: camera.rgb
+  fov: 90
+  width: 640
+  height: 360
+  location: [-20, 0.0, 20.0]  
+  rotation: [0.0, -45.0, 0.0]
+  distort_images: False
+# lidar1: # 左前
+#   module: lidar.ray_cast
+#   location: [3, 1.275, 1.15]
+#   rotation: [0.0, 0.0, 0.0]  # 3个 lidar的 rotation都需要再确认
+#   range: 50.0
+#   rotation_frequency: 10  # 水平角分辨率 10Hz->0.18deg，5Hz->0.09deg, 20Hz->0.36deg 
+#   points_per_second: 640000
+#   horizontal_fov: 360 # deg
+#   upper_fov: 15   # deg
+#   lower_fov: -16   # deg
+#   channels: 32 # int
+# lidar2: # 右前
+#   module: lidar.ray_cast
+#   location: [3, -1.275, 1.15]
+#   rotation: [0.0, 0.0, 0.0]
+#   range: 50.0
+#   rotation_frequency: 10
+#   points_per_second: 640000
+#   horizontal_fov: 360 # deg
+#   upper_fov: 15 # deg
+#   lower_fov: -16 # deg
+#   channels: 32 # int
+# lidar3: # 车顶
+#   module: lidar.ray_cast
+#   location: [1.73, 0.0, 3.28] 
+#   rotation: [0.0, 0.0, 0.0]
+#   range: 50.0
+#   rotation_frequency: 10
+#   points_per_second: 640000
+#   horizontal_fov: 360 # deg
+#   upper_fov: 15 # deg
+#   lower_fov: -16 # deg
+#   channels: 32 # int
